@@ -30,6 +30,25 @@ body {
 
 #intro {
   padding: 5% 0%;
+  background-image: url('/images/IMAG0458.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  border-bottom: 5px solid #5E9BAB;
+}
+
+#intro h1 {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  text-align: right;
+  max-width: 50%;
+  float: right;
+  font-size: 34px;
+}
+
+#intro:after {
+  display: table;
+  width: 100%;
+  clear: both;
 }
 
 .intro .container {
@@ -205,6 +224,10 @@ section:nth-child(4n+5) {
 }
 
 @media screen and (max-width: 718px) {
+  #intro h1 {
+    font-size: 24px;
+  }
+
   .container {
     width: 80%;
     margin-left: auto;
