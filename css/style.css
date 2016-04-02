@@ -24,6 +24,10 @@ body {
   font-family: 'source sans pro', helvetica, arial, sans-serif;
 }
 
+p, ul, ol, table, h4, h5, h6 {
+  line-height: 1.4;
+}
+
 .bolder {
   font-weight: 700;
 }
@@ -34,7 +38,7 @@ body {
   background-size: cover;
   background-position: center;
   color: white;
-  border-bottom: 5px solid #5E9BAB;
+  border-bottom: 5px solid #738B81;
 }
 
 #intro h1 {
@@ -57,76 +61,22 @@ body {
   margin-right: auto;
 }
 
-.icons {
-  margin-left: 3%;
-  margin-top: 4%;
-}
-
-a.mail {
-  font-family: 'social';
-  font-size: 35px;
-  color: #d0d0d0;
-  text-decoration: none;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-a.mail:hover {
-  color: #c71610;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-a.facebook {
-  font-family: 'social';
-  font-size: 35px;
-  color: #d0d0d0;
-  text-decoration: none;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-a.facebook:hover {
-  color: #3b5998;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
 .container {
   width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  padding: 30px 0;
 }
-
-footer {
-  padding: 3% 0;
-}
-
 
 h2 {
   font-weight: 700;
   font-size: 38px;
-  margin-top: 60px;
   text-align: left;
 }
 
 h3 {
   font-weight: 600;
-  margin-top: 6px;
   font-size: 24px;
-  line-height: 32px;
   font-weight: 400;
-  margin-top: 24px;
-  margin-bottom: 25px;
-}
-
-.icon {
-  margin-left: 10px;
-  font-size: 28px;
 }
 
 p, ul, ol, table {
@@ -166,32 +116,39 @@ ul, ol {
   padding-bottom:40px;
 }
 
-section:nth-child(1n+2) {
+section,
+footer {
   color: white;
 }
 
-section:nth-child(1n+2) a {
-  color: inherit;
+section a,
+section a:hover,
+section a:focus,
+footer a,
+footer a:hover,
+footer a:focus {
+  color: white;
 }
 
-section:nth-child(1n+2) table {
+.panel {
   color: #1b1b1b;
 }
 
-section:nth-child(4n+2) {
-  background-color: #76B1BF;
+section:nth-child(2n+2) {
+  background-color: #82A099;
 }
 
-section:nth-child(4n+3) {
-  background-color: #5E9BAB;
+section:nth-child(2n+3) {
+  background-color: #738B81;
 }
 
-section:nth-child(4n+4) {
-  background-color: #435A64;
+section:nth-child(2n+4) {
+  background-color: #647D6C;
 }
 
-section:nth-child(4n+5) {
-  background-color: #415F79;
+footer {
+  background-color: #9BA493;
+  border-top: 5px solid #818D77;
 }
 
 .link {
@@ -206,24 +163,67 @@ section:nth-child(4n+5) {
 .link:hover {
   color:#395575;
   text-decoration: none;
+}
+
+a.mail {
+  font-family: 'social';
+  font-size: 24px;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+}
+
+a.mail:hover {
+  color: white;
+}
+
+a.facebook {
+  font-family: 'social';
+  font-size: 24px;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+}
+
+a.facebook:hover {
+  color: white;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   transition: all .3s ease;
+}
+
+.icon {
+  font-size: 0.65em;
+  margin-left: 0.35em;
 }
 
 .available {
   color:#395575;
 }
 
-.image {
+#about img {
   display: block;
-  float: right;
   max-width: 50%;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#about img.pull-right {
+  float: right;
+  margin-left: 30px;
+}
+
+#about img.pull-left {
+  float: left;
+  margin-right: 30px;
 }
 
 @media screen and (max-width: 718px) {
+  #about img {
+    max-width: 100%;
+    float: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
   #intro h1 {
     font-size: 24px;
   }
@@ -238,23 +238,13 @@ section:nth-child(4n+5) {
     font-weight: 700;
     font-size: 38px;
     color: white;
-    margin-top: 60px;
   }
 
   h3 {
     color: white;
     font-weight: 600;
-    margin-top: 6px;
     font-size: 24px;
-    line-height: 32px;
     font-weight: 400;
-    margin-top: 24px;
-    margin-bottom: 25px;
-  }
-
-  .icons {
-    margin-top: 4%;
-    margin-left: 16%;
   }
 
   .image {
