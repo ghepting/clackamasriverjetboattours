@@ -1,20 +1,27 @@
 <footer id="contact">
   <div class="container">
-    <h2>Contact<span class="icon"><i class="icon-comment-1"></i></span></h2>
-    <ul>
-      <li>
-        Phone: <a href="tel:{{ site.phone }}">{{ site.phone }}</a>
-      </li>
-      <li>
-        Email: <a href="mailto:{{ site.email }}">{{ site.email }} <i class="icon-mail"></i></a>
-      </li>
-      <li>
-        Mailing Address: {{ site.address }}
-      </li>
-    </ul>
-    <p>
-      <a class="mail" href="mailto:{{ site.email }}"><i class="icon-mail"></i></a>
-      <a class="facebook" href="http://facebook.com/{{ site.facebook_username }}"><i class="icon-facebook"></i></a>
-    </p>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Contact</h2>
+        <p>
+          <a href="tel:{{ site.phone }}">{{ site.phone }}</a>
+          <br/>
+          <a href="mailto:{{ site.email }}">{{ site.email }} <i class="icon-mail"></i></a>
+        </p>
+        <p>
+          {{ site.address.street }}
+          <br/>
+          {{ site.address.city_state_zip }}
+        </p>
+        <p>
+          <a class="mail" href="mailto:{{ site.email }}"><i class="icon-mail"></i></a>
+          <a class="facebook" href="http://facebook.com/{{ site.facebook_username }}"><i class="icon-facebook"></i></a>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <br/>
+        <img class="img-responsive img-thumbnail" src="/images/IMAG0367.jpg">
+      </div>
+    </div>
   </div>
 </footer>

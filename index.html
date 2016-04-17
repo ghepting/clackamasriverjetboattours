@@ -4,13 +4,19 @@ layout: default
 
 <section id="intro">
   <div class="container">
-    <h1>Welcome to <span class="bolder">{{ site.title }}</span>!</h1>
+    <h1>
+      Welcome to <span class="bolder">{{ site.title }}</span>!
+      {% if site.booking_url %}
+      <br/>
+      <a class="btn btn-lg btn-primary btn-success" href="{{ site.booking_url }}">Book a Trip</a>
+      {% endif %}
+    </h1>
   </div>
 </section>
 
 <section id="about">
   <div class="container">
-    <h2>About Business<span class="icon"><i class="icon-vcard"></i></span></h2>
+    <h2>About Business</h2>
     <h3>
       Welcome to Clackamas River Jet Boat Tours!
     </h3>
@@ -108,6 +114,7 @@ layout: default
 
 <section>
   <div class="container">
+    <h2>The Fleet</h2>
     <div class="row">
       <div class="col-lg-6">
         <h3>
@@ -121,6 +128,12 @@ layout: default
         </p>
       </div>
       <div class="col-lg-6">
+        <img class="img-responsive img-thumbnail" src="{{ site.polaris_image }}" alt="Polaris">
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-lg-6 col-lg-push-6">
         <h3>
           About Achilles SU­18
         </h3>
@@ -133,9 +146,14 @@ layout: default
           This boat is the heavy hauler! With over a 1500 lb payload, it is a modern engineering marvel to witness the Achilles navigate the shallows of the river. Even with a full load, it will slide through six inches of water with ease!.
         </p>
       </div>
+      <div class="col-lg-6 col-lg-pull-6">
+        <img class="img-responsive img-thumbnail" src="{{ site.achilles_image }}" alt="Achilles (Coming soon)">
+      </div>
     </div>
   </div>
 </section>
+
+{% include cta.html %}
 
 <section>
   <div class="container">
@@ -171,9 +189,23 @@ layout: default
     <h3>
       What to bring
     </h3>
-    <p>
-      It is highly recommended to bring sturdy river footwear, the rocks in the Clackamas are very slick and hard to walk on in bare feet or flip flop sandals! Food and hydrating beverages are welcome and encouraged. There is area for back packs and small coolers. If you book a trip to Mciver Park, please bring a lunch as we will stop and relax for a bit in the park, at the top of the river. Dress appropriate for the weather. The boats stay very dry inside, but if you are booking a trip in the off season be sure to bring clothes that stay warm and dry. During peak season, it is still a good idea to bring a warm sweatshirt or light jacket. The air on the river can still feel cold when the boats are underway, even when the weather is warm.
-    </p>
+    <ul>
+      <li>
+        It is highly recommended to bring sturdy river footwear, the rocks in the Clackamas are <em>very</em> slick and hard to walk on in bare feet or flip flop sandals!
+      </li>
+      <li>
+        Food and hydrating beverages are welcome and encouraged. There is area for backpacks and small coolers.
+      </li>
+      <li>
+        If you book a trip to Mciver Park, please bring a lunch as we will stop and relax for a bit in the park, at the top of the river.
+      </li>
+      <li>
+        Dress appropriate for the weather. The boats stay very dry inside, but if you are booking a trip in the off season be sure to bring clothes that stay warm and dry. During peak season, it is still a good idea to bring a warm sweatshirt or light jacket. The air on the river can still feel cold when the boats are underway, even when the weather is warm.
+      </li>
+      <li>
+        Swimming is welcome.
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -184,10 +216,7 @@ layout: default
     </h3>
     <ul>
       <li>
-        $50 deposit when booking a trip.
-      </li>
-      <li>
-        Deposit is non-­refundable if not canceled at least 72 hours before the day of your trip. The remainder of the payment will be due at time of departure.
+        Card number will be held at time of booking and a $75 fee will be charged if appointment is not canceled within 72 hours of departure.
       </li>
       <li>
         We accept cash and Visa, MasterCard or American Express.
@@ -234,10 +263,19 @@ layout: default
 
 <section id="rates">
   <div class="container">
-    <h2>Rates<span class="icon"><i class="icon-newspaper"></i></span></h2>
+    <h2>Rates</h2>
+    <p>For full day charters or special events please call or email.</p>
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3><span class="small pull-right">Boat 1</span> Polaris, Spirit</h3>
+        <div class="row">
+          <div class="col-md-9">
+            <h3>Polaris, Spirit</h3>
+            <p>2 Customers, 400 lb max capacity</p>
+          </div>
+          <div class="col-md-3">
+            <img class="img-responsive img-thumbnail" src="{{ site.polaris_image }}" alt="Polaris">
+          </div>
+        </div>
       </div>
       <table class="table">
         <tbody>
@@ -246,26 +284,42 @@ layout: default
           </tr>
           <tr>
             <td>Clackamette Park to Barton Park</td>
-            <td>$300 Peak - $400</td>
+            <td>$300</td>
+          </tr>
+          <tr>
+            <td>Clackamette Park to Mciver Park</td>
+            <td>$400 (Day Charter)</td>
           </tr>
           <tr>
             <th colspan="2">Peak Season (July 1st-end of September)</th>
           </tr>
           <tr>
+            <td>Clackamette Park to Barton Park</td>
+            <td>$400</td>
+          </tr>
+          <tr>
             <td>Clackamette Park to Mciver Park</td>
-            <td>$400 Peak - $550 (Day Charter)</td>
+            <td>$550 (Day Charter)</td>
           </tr>
         </tbody>
       </table>
       {% if site.booking_url %}
       <div class="panel-footer">
-        <a class="btn btn-primary btn-success" href="#">Book a Trip</a>
+        <a class="btn btn-primary btn-success" href="{{ site.booking_url }}">Book a Trip</a>
       </div>
       {% endif %}
     </div>
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3><span class="small pull-right">Boat 2</span> Achilles SU-18 (Coming soon)</h3>
+        <div class="row">
+          <div class="col-md-9">
+            <h3>Achilles SU-18 (Coming soon)</h3>
+            <p>6 customers, 1500 lb max capacity</p>
+          </div>
+          <div class="col-md-3">
+            <img class="img-responsive img-thumbnail" src="{{ site.achilles_image }}" alt="Achilles (Coming soon)">
+          </div>
+        </div>
       </div>
       <table class="table">
         <tbody>
@@ -298,21 +352,11 @@ layout: default
       </table>
       {% if site.booking_url %}
       <div class="panel-footer">
-        <a class="btn btn-primary btn-success" href="#">Book a Trip</a>
+        <a class="btn btn-primary btn-success" href="{{ site.booking_url }}">Book a Trip</a>
       </div>
       {% endif %}
     </div>
   </div>
 </section>
 
-<!--
-<section id="registration">
-  <div class="container">
-    <h2>Book a Trip<span class="icon"><i class="icon-rocket"></i></span></h2>
-    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
-    <p>
-      <a class="btn btn-primary btn-lg btn-success" href="#">Book a Trip</a>
-    </p>
-  </div>
-</section>
--->
+{% include cta.html %}
